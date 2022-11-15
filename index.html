@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c7b5815651.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator|Shiridhar</title>
+  </head>
+  <body onload="loading()">
+    <div class="loader">
+      <img src="loader.gif">
+    </div>
+    <div class="container">
+      <div class="screen">
+        <input type="text" id="screenInp" />
+        <h1 id="sec-screen"></h1>
+        <div class="history">
+          <span><i class="fa-solid fa-clock-rotate-left"></i></span>
+        </div>
+      </div>
+      <div class="historyScreen">
+        <h1>History</h1>
+        <h3 id="cross"><i class="fa-solid fa-xmark"></i></h3>
+        <hr />
+        <button id="clear">Clear All <i class="fa-solid fa-trash"></i></button>
+        <div class="historyContent"></div>
+      </div>
+      <div class="grid-display">
+        <div class="items item1"><button class="btn">AC</button></div>
+        <div class="items item2"><button class="btn">%</button></div>
+        <div class="items item3"><button class="btn">÷</button></div>
+        <div class="items item4">
+          <button class="btn"><i class="fa-solid fa-delete-left"></i></button>
+        </div>
+        <div class="items item5"><button class="btn">7</button></div>
+        <div class="items item6"><button class="btn">8</button></div>
+        <div class="items item7"><button class="btn">9</button></div>
+        <div class="items item8"><button class="btn">X</button></div>
+        <div class="items item9"><button class="btn">4</button></div>
+        <div class="items item10"><button class="btn">5</button></div>
+        <div class="items item11"><button class="btn">6</button></div>
+        <div class="items item12"><button class="btn">-</button></div>
+        <div class="items item13"><button class="btn">1</button></div>
+        <div class="items item14"><button class="btn">2</button></div>
+        <div class="items item15"><button class="btn">3</button></div>
+        <div class="items item16"><button class="btn">+</button></div>
+        <div class="items item17"><button class="btn">0</button></div>
+        <div class="items item18"><button class="btn">.</button></div>
+        <div class="items item19">
+          <button onclick="scrSum()" class="btn">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

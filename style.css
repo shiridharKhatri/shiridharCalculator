@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Bungee+Spice&family=Caveat&family=Combo&family=Concert+One&family=Dancing+Script&family=DynaPuff:wght@400;500&family=Lexend:wght@500&family=Lobster&family=Pacifico&family=Permanent+Marker&family=Poppins:wght@100&family=Qwitcher+Grypen&family=Roboto:ital,wght@1,100&family=Rubik:wght@300&family=Silkscreen&family=Varela+Round&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+}
+
+body {
+  background-color: #101010;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: transparent;
+}
+html .loader {
+  position: fixed;
+  z-index: 99;
+  background-color: #000;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html .loader img {
+  height: 25rem;
+}
+html .container {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  white-space: wrap;
+  word-break: break-word;
+}
+html .container .screen {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 30%;
+  padding: 2rem;
+  position: relative;
+}
+html .container .screen input {
+  width: 100%;
+  font-size: 4rem;
+  font-weight: bold;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-family: "Varela Round", sans-serif;
+}
+html .container .screen #sec-screen {
+  margin-top: 0.6rem;
+  font-size: 2.4rem;
+  width: 100%;
+  color: #445;
+}
+html .container .screen .history {
+  position: absolute;
+  right: 2%;
+  bottom: 0;
+}
+html .container .screen .history span i {
+  font-size: 3rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+html .container .screen .history span i:hover {
+  color: #f58216;
+}
+html .container .historyScreen {
+  background-color: #2b2a2a;
+  box-shadow: 0.5rem 0.5rem 3.5rem black;
+  position: absolute;
+  padding: 1rem;
+  right: -90%;
+  height: 100vh;
+  z-index: 99;
+  width: 90%;
+  transition: 0.3s ease;
+}
+html .container .historyScreen h1 {
+  color: #fff;
+  position: absolute;
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  top: 5%;
+}
+html .container .historyScreen h3 {
+  font-size: 4rem;
+  position: absolute;
+  left: 7%;
+  top: 4%;
+  cursor: pointer;
+  color: #fff;
+}
+html .container .historyScreen hr {
+  position: relative;
+  top: 13%;
+}
+html .container .historyScreen button {
+  position: absolute;
+  right: 5%;
+  top: 17%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 40%;
+  background-color: transparent;
+  border-color: #f58216;
+  color: #f58216;
+  transition: 0.3s ease;
+  box-shadow: -1px 4px 52px -1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: -1px 4px 52px -1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -1px 4px 52px -1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+html .container .historyScreen button:hover {
+  background-color: #f58216;
+  color: #101010;
+}
+html .container .historyScreen .historyContent {
+  overflow: scroll;
+  position: relative;
+  width: 100%;
+  height: 75%;
+  top: 25%;
+}
+html .container .historyScreen .historyContent::-webkit-scrollbar {
+  display: none;
+}
+html .container .historyScreen .historyContent .cont {
+  padding: 1rem;
+  margin: 1rem;
+  position: relative;
+}
+html .container .historyScreen .historyContent .cont h2 {
+  width: 80%;
+  overflow: scroll;
+  font-weight: 400;
+  font-size: 3.5rem;
+  text-align: justify;
+  color: #f58216;
+}
+html .container .historyScreen .historyContent .cont h2::-webkit-scrollbar {
+  display: none;
+}
+html .container .historyScreen .historyContent .cont h4 {
+  font-weight: 400;
+  font-size: 3rem;
+  color: #fff;
+}
+html .container .historyScreen .historyContent .cont p {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  color: white;
+  font-weight: 400;
+  width: 15%;
+  opacity: 0.5;
+  text-align: center;
+}
+html .container .grid-display {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: 70%;
+}
+html .container .grid-display .items {
+  margin: 0.2rem;
+}
+html .container .grid-display .items button {
+  border: none;
+  height: 100%;
+  width: 100%;
+  background-color: #101010;
+  color: white;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+html .container .grid-display .items button:hover {
+  background-color: #445;
+}
+html .container .grid-display .item1 button {
+  color: #e3242b;
+}
+html .container .grid-display .item4 button {
+  color: green;
+}
+html .container .grid-display .item4 button i {
+  pointer-events: none;
+}
+html .container .grid-display .item2 button,
+html .container .grid-display .item3 button,
+html .container .grid-display .item8 button,
+html .container .grid-display .item12 button,
+html .container .grid-display .item16 button {
+  color: #f58216;
+}
+html .container .grid-display .item1,
+html .container .grid-display .item2,
+html .container .grid-display .item3,
+html .container .grid-display .item4 {
+  height: 65%;
+}
+html .container .grid-display .item1 button,
+html .container .grid-display .item2 button,
+html .container .grid-display .item3 button,
+html .container .grid-display .item4 button {
+  position: relative;
+  bottom: -48%;
+}
+html .container .grid-display .item19 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+html .container .grid-display .item19 button {
+  background-color: #f58216;
+  color: black;
+}
+html .container .grid-display .item19 button:hover {
+  background-color: #cc7524;
+}
+
+@media (min-device-width: 320px) and (max-device-width: 768px) {
+  html .container {
+    padding: 0;
+  }
+  html .container .screen {
+    bottom: -5%;
+  }
+  html .container .screen .history {
+    position: absolute;
+    right: 7%;
+    bottom: 0;
+  }
+  html .container .screen .history span i {
+    font-size: 3.5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  html .container .screen .history span i:hover {
+    color: #f58216;
+  }
+  html .container .grid-display {
+    height: 60%;
+    position: relative;
+    bottom: -5%;
+  }
+  html .container .grid-display .items {
+    margin: 0.1rem;
+  }
+  html .container .grid-display .items button:hover {
+    background-color: #101010;
+  }
+  html .container .grid-display .item17 button {
+    border-radius: 0 0 0 2.7rem;
+  }
+  html .container .grid-display .item19 button {
+    border-radius: 0 0 2.7rem 0;
+  }
+  html .container .grid-display .item19 button:hover {
+    background-color: #cc7524;
+  }
+  html .container .grid-display .item1 button,
+html .container .grid-display .item2 button,
+html .container .grid-display .item3 button,
+html .container .grid-display .item4 button {
+    background-color: rgb(36, 36, 44);
+    position: relative;
+    bottom: -50%;
+  }
+  html .container .grid-display .item8 button,
+html .container .grid-display .item12 button,
+html .container .grid-display .item16 button {
+    background-color: rgb(36, 36, 44);
+  }
+}/*# sourceMappingURL=style.css.map */
